@@ -178,9 +178,9 @@ void	LCD_voidLCDClear (void)
 /***************************************************************************/
 void	LCD_voidWriteChar4bit(u8 Data)
 {
-	/*	1-	RS = 1	to Send CMD								*/
+	/*	1-	RS = 1	to Send Data								*/
 	DIO_voidSetPinValue(LCD_CONTROL_PORT,LCD_RS,HIGH);
-	/*	2-	RW = 0	to Write CMD							*/
+	/*	2-	RW = 0	to Write Data							*/
 	DIO_voidSetPinValue(LCD_CONTROL_PORT,LCD_RW,LOW);
 	/*	3-	En must be latched (EN = 1)						*/
 	DIO_voidSetPinValue(LCD_CONTROL_PORT,LCD_EN,HIGH);
